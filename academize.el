@@ -4,6 +4,7 @@
 (defun academize ()
   (defun replace-all (from to)
     (save-excursion
+      (beginning-of-buffer)
       (while (search-forward from nil 'noerror)
         (replace-match to))))
 
