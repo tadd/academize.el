@@ -8,9 +8,5 @@
       (while (search-forward from nil 'noerror)
         (replace-match to))))
 
-  (defun replace-all-list (l)
-    (dolist (pair l)
-      (replace-all (car pair) (cdr pair))))
-
-  (replace-all-list '(("、" . "，")
-                      ("。" . "．"))))
+  (replace-all "、" "，")
+  (replace-all "。" "．"))
